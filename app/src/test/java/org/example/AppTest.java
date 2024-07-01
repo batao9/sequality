@@ -16,6 +16,6 @@ public class AppTest {
   @Test
   public void testAppReternerHelloWorld() {
     App classUnderTest = new App();
-    assertEquals("Hello World!", classUnderTest.getGreeting());
+    assertEquals("Hello World", classUnderTest.getGreeting());
   }
 }
