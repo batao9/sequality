@@ -4,11 +4,24 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+  public String getGreeting() {
+    return "Hello World!";
+  }
+
+  public static void main(String[] args) {
+    Calculate calculate = new Calculate();
+    System.out.println(new App().getGreeting());
+
+    int[] array_1to10 = new int[10];
+    for (int i = 0; i < 10; i++) {
+      array_1to10[i] = i + 1;
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+    System.out.println("Sum of 2 and 3 is " + calculate.sum(2, 3) + ". Average is " + calculate.average(2, 3) + ".");
+    System.out.println(
+        "Sum of 1 to 10 is " + calculate.sum(array_1to10) + ". Average is " + calculate.average(array_1to10) + ".");
+    System.out.println("Sum of odd of 1 to 10 is " + calculate.sum_odd(array_1to10) + ". Sum of even is "
+        + calculate.sum_even(array_1to10) + ".");
+
+  }
 }
